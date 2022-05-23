@@ -1,0 +1,2 @@
+class GroupPurchase < ApplicationRecord
+end
