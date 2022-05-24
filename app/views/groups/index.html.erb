@@ -1,0 +1,20 @@
+<section>
+ <div class="log-in d-flex justify-content-between align-items-center">
+               <span> 
+               <%= link_to '<—' , root_path, class: "arrow nav-link" %> </span>
+                <li class="log"> <h2> CATEGORIES</h2></li>
+              <%= image_tag "icon2.svg", class: "icon"  %>
+                
+</div>
+
+<% @groups.each do |group| %>
+<div class="groups d-flex justify-content-between align-items-center">
+ <%= image_tag "#{group.icon}", class: "icon"  %>
+ <p> group.name</p>
+ <span> group.total_purchases_group </span>
+</div>
+ <% end %>
+
+ <%= link_to 'Add new Category', new_group_path  %>
+
+</section>

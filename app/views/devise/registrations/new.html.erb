@@ -1,0 +1,27 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+   <div class="log-in d-flex justify-content-between align-items-center">
+               <span> 
+               <%= link_to "<—" , root_path , class: "arrow nav-link" %> </span>
+                <li class="log"> <h2> REGISTER</h2></li>
+                <li> <%= f.submit "Next", class: "mt-4 btn" %></li> 
+</div>
+
+    <div class="field">
+    <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Full name" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password" , class: "form-control", placeholder: "password" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Confirm password" %>
+  </div>
+
+<% end %>
+
