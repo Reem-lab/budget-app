@@ -3,7 +3,6 @@ class Group < ApplicationRecord
   has_many :purchases, dependent: :destroy
   has_many :purchases, through: :group_purchases
 
-  
   def total_purchases_group
     author.increment!(:total_purchases)
   end

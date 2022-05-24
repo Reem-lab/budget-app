@@ -6,12 +6,10 @@ class GroupsController < ApplicationController
 
   def new
     @current_user = current_user
-   @group = Group.new
+    @group = Group.new
   end
 
-  def create
-  end
+  def create; end
 
-  def show
-  end
+  def show; end
 end
