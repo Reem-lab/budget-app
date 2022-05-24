@@ -17,37 +17,36 @@
 .home {
   background-image: url(../images/second.png);
   height: 90vh;
- }
+}
 
- .log-in {
-   width: 100%;
-   background-color: #316EB1;
-   list-style: none;
+.log-in {
+  width: 100%;
+  background-color: #316eb1;
+  list-style: none;
   padding: 5px;
- }
+}
 
- .groups {
+.groups {
   width: 100%;
   background-color: #fff;
- padding: 5px;
- }
+  padding: 5px;
+}
 
- .arrow {
-   color: #fff;
-   height: 10px;
- }
+.arrow {
+  color: #fff;
+  height: 10px;
+}
 
- .log {
-   color: #fff;
- }
+.log {
+  color: #fff;
+}
 
- .btn {
-   color: #fff;
- }
+.btn {
+  color: #fff;
+}
 
- .icon {
-   color: #fff;
-   width: 30px;
-   height: 30px;
- }
-
+.icon {
+  color: #fff;
+  width: 30px;
+  height: 30px;
+}
