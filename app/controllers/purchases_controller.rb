@@ -2,7 +2,8 @@ class PurchasesController < ApplicationController
   def index
     @current_user = current_user
     @group = Group.find(params[:group_id])
-    @purchases = Group.find(params[:group_id]).group_purchases.order(created_at: :desc)
+    # @purchases = Purchase.all
+    @group_purchases = Group.find(params[:group_id]).group_purchases.order(created_at: :desc)
   end
 
   def new
@@ -15,7 +16,9 @@ class PurchasesController < ApplicationController
     @purchase = current_user.purchases.new(name: params[:name], amount: params[:amount])
 
     if @purchase.save
-      redirect_to group_purchases_path, notice: 'Your Transaction is created successfully 🎉'
+      @group_purchase = GroupPurchase.new(group_id: params[:groups], purchase_id: @purchase.id)
+      @group_purchase.save
+      redirect_to group_purchases_path(group_id: params[:groups]), notice: 'Your Transaction is created successfully 🎉'
     else
       flash[:alert] = 'Something went wrong, Try again!'
       render :new
