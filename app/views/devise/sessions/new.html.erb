@@ -1,6 +1,6 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {"data-turbo": "false"}) do |f| %>
  <div class="log-in d-flex justify-content-between align-items-center">
-               <span>  <%= link_to "<—" , root_path , class: "arrow nav-link" %> </span>
+               <%= render partial: "shared/arrow"%>
                 <li class="log"> <h2> LOGIN</h2></li>
                 <li> <%= f.submit "Log in", class: "mt-4 btn" %></li> 
 </div>

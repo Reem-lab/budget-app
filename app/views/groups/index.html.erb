@@ -1,20 +1,27 @@
-<section>
+<section class="d-flex flex-column">
  <div class="log-in d-flex justify-content-between align-items-center">
-               <span> 
-               <%= link_to '<—' , root_path, class: "arrow nav-link" %> </span>
+                 <%= image_tag "menu.png", class: "icon"  %>
                 <li class="log"> <h2> CATEGORIES</h2></li>
               <%= image_tag "icon2.svg", class: "icon"  %>
                 
 </div>
 
 <% @groups.each do |group| %>
-<div class="groups d-flex justify-content-between align-items-center">
- <%= image_tag "#{group.icon}", class: "icon"  %>
- <p> group.name</p>
- <span> group.total_purchases_group </span>
+  <%= link_to " /groups/#{group.id}/purchases" do %>
+  <div class="groups d-flex justify-content-between">
+  <% if group.icon.attached? %>
+   <div class="img-div">
+    <img class="img" src="<%= url_for(group.icon) %>">
+    </div>
+  <% end %>
+ <p class="name-group"> <%= group.name %></p>
+ <span class="name-group" > total purchases: <%= group.total_purchases %> </span>
 </div>
+<% end %>
  <% end %>
 
- <%= link_to 'Add new Category', new_group_path  %>
+ <%= link_to 'Add new Category', new_group_path, class:"add-category"  %>
+
+
 
 </section>

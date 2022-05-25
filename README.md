@@ -1,24 +1,109 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
+![](https://img.shields.io/static/v1?label=BY&message=Reemoz&color=pink)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Budget APP
 
-Things you may want to cover:
+> Budget app is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what
+
+
+## vedio demo 🎥
+
+
+## Heroku Deploy 🚀
+
+[Live demo here]()
+
+## Built With
+
+- Ruby
+- Ruby on Rails
+- RSpec, PostgreSQL
+
+## Configuration
+
+To use this project you first need to have installed the following:
+
++ Node.js
++ Ruby
++ PostgreSQL
++ Rails
 
 * Ruby version
 
-* System dependencies
+The version of ruby that is needed for this project is 
 
-* Configuration
++ 3.1.1
 
-* Database creation
+Once you have installed them, you need to use the following command to clone the repository:
 
-* Database initialization
+```
+git clone git@github.com:Reem-lab/budget-app.git
+```
 
-* How to run the test suite
+### Database creation
 
-* Services (job queues, cache servers, search engines, etc.)
+Next, use this command to create the databases:
+```
+rails db:create
+```
 
-* Deployment instructions
+## Usage
 
-* ...
+Finally, use the following command to initialize the live server:
+
+```
+rails s
+```
+
+```
+
+open on your browser "localhost:3000"
+```
+## How to run the tests
+
+before you run the tests
+
+```
+rails db:seed RAILS_ENV=test
+```
+
+```
+rspec spec
+```
+### or :
+```
+rspec spec/models
+rspec spec/views
+```
+
+## Authors
+
+
+👤 **Reem Janina**
+
+ Platform | Badge |
+ --- | --- |
+ **GitHub**  | [@Reem-lab](https://github.com/Reem-lab)
+ **Twitter** | [Rem79940127](https://twitter.com/Rem79940127)
+ **LinkdIn** | [reem-janina](https://www.linkedin.com/in/reem-janina-ab74ab21a/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
