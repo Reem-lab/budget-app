@@ -12,15 +12,17 @@
     </div>
   <% end %>
  <p class="name-group"> <%= @group.name %></p>
- <span class="name-group"> Number of purchases:<%= @group.total_purchases %> </span>
+ <span class="name-group">Total amount:<%= @group.total_purchases %> $</span>
 </div>
 
- <div class="groups d-flex justify-content-between">
-<% @purchases.each do |purchase| %>
-  <p class="name-group"> <%= purchase.name %></p>
- <span class="name-group"> amount: <%= purchase.amount %> </span>
+
+<% @group_purchases.each do |group_purchase| %>
+<div class="groups d-flex flex-column justify-content-between">
+  <p class="name-group"> <%= group_purchase.purchase.name %></p>
+ <span class="name-group"> amount: <%= group_purchase.purchase.amount %>$ </span>
+ </div>
 <% end %>
-</div>
+
 
 <%= link_to 'Add new Purchase', "/groups/#{@group.id}/purchases/new", class:"add-category"  %>
 </section>
