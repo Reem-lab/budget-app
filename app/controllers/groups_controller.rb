@@ -9,7 +9,20 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
-  def create; end
+  def create
+    @group = current_user.groups.new(group_params)
 
-  def show; end
+    if @group.save
+      redirect_to root_path, notice: 'Your category is created successfully 🎉'
+    else
+      flash[:alert] = 'Something went wrong, Try again!'
+      render :new
+    end
+  end
+
+  private
+
+  def group_params
+    params.require(:group).permit(:name, :icon)
+  end
 end

@@ -4,17 +4,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="d-flex align-items-center justify-content-between">
         <% if @current_user %>
-          <li class="nav-item">
-            <%= link_to "Category", '/groups' , class: "nav-link" %>
-          </li>
+         <div>
+              <h1>Welcome to our budget App✨</h1>
+          </div>
           <li class="nav-item">
             <%= link_to "Log out", '/users/sign_out' , data: { method: :delete }, class: "nav-link"  %>
           </li>
-          <div class="d-flex align-items-center justify-content-center">
-              <h1>Welcome to our budget App✨</h1>
-          </div>
         <% end %>
       </ul>
     </div>

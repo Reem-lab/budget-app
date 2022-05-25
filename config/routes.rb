@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out', to: 'devise/sessions#destroy'
   end
-  resources :groups, only: [:index, :new, :create, :show]
+  resources :groups, only: [:index, :new, :create] do
+     resources :purchases, only: [:index, :new, :create]
+  end
 end
