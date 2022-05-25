@@ -7,7 +7,8 @@ RSpec.describe 'categories index', type: :feature do
       Group.destroy_all
       @u1 = User.new(name: 'Mary', password: '111111', email: 'u@u')
       @u1.save
-      @r1= Group.new(id: 4, name: 'Rent', icon: Rack::Test::UploadedFile.new('spec/support/image.jpg', 'image/jpg'), total_purchases: 123)
+      @r1 = Group.new(id: 4, name: 'Rent', icon: Rack::Test::UploadedFile.new('spec/support/image.jpg', 'image/jpg'),
+                      total_purchases: 123)
       @r1.save
       visit new_user_session_path
       fill_in 'Email', with: 'u@u'

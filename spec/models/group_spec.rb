@@ -7,7 +7,7 @@ RSpec.describe Group, type: :model do
   end
 
   subject do
-    @p = Group.new(name: 'test', icon: Rack::Test::UploadedFile.new('spec/support/image.jpg', 'image/jpg') )
+    @p = Group.new(name: 'test', icon: Rack::Test::UploadedFile.new('spec/support/image.jpg', 'image/jpg'))
   end
   before { subject.save }
 
@@ -22,5 +22,4 @@ RSpec.describe Group, type: :model do
       expect(subject).to_not be_valid
     end
   end
-
 end
