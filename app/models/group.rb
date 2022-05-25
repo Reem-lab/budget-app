@@ -7,9 +7,9 @@ class Group < ApplicationRecord
   validates :name, presence: true
   validates :icon, presence: true
 
-  after_destroy :total_purchases_group_delete
+  # after_destroy :total_purchases_group_delete
 
-  def total_purchases_group_delete
-    group.decrement!(:total_purchases, purchase.amount)
-  end
+  # def total_purchases_group_delete
+  #   group.decrement!(:total_purchases, purchase.amount)
+  # end
 end

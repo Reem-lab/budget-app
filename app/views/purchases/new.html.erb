@@ -25,8 +25,8 @@
 </div> %>
 
 <div class="field">
-    <%= f.label :group_id, class:"mt-2" %><br />
-    <%= f.select :group_id, options_from_collection_for_select(@available_groups, 'id', 'name'), {}, { class: "form-control" }%>
+    <%= f.label :groups, class:"mt-2" %><br />
+    <%= f.select :groups, options_from_collection_for_select(@available_groups, 'id', 'name'), {}, { class: "form-control" }%>
   </div>
 
   <div class="actions">
