@@ -6,7 +6,7 @@
 > Budget app is about building a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what
 
 
-## vedio demo 🎥
+## video demo 🎥
 
 
 
@@ -20,7 +20,7 @@ https://user-images.githubusercontent.com/58553711/170388832-d1c293b9-dff6-4126-
 
 [Live demo here](https://agile-atoll-37898.herokuapp.com/)
 
-## Vedio for me explaining 🎦 
+## Video for me explaining 🎦 
 [See the Explanation here](https://www.loom.com/share/072e142042e049b8a0e0bc512ddbb51c)
 
 ## Built With
