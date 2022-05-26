@@ -20,6 +20,9 @@ https://user-images.githubusercontent.com/58553711/170388832-d1c293b9-dff6-4126-
 
 [Live demo here](https://agile-atoll-37898.herokuapp.com/)
 
+## Vedio for me explaining 🎦 
+[See the Explanation here](https://www.loom.com/share/072e142042e049b8a0e0bc512ddbb51c)
+
 ## Built With
 
 - Ruby
