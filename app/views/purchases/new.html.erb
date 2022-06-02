@@ -1,0 +1,37 @@
+<section>
+ <div class="log-in d-flex justify-content-between align-items-center">
+               <%= render partial: "shared/arrow"%>
+                <li class="log"> <h2> ADD PURCHASE</h2></li>
+              <%= image_tag "icon2.svg", class: "icon"  %>
+</div>
+<%= form_with url: group_purchases_path, method: :post do |f| %>
+
+   <div class="field">
+    <%= f.label :name, class:"mt-2" %><br />
+    <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "name" %>
+  </div>
+
+    <div class="field">
+    <%= f.label :amount, class:"mt-2" %><br />
+    <%= f.text_field :amount, autofocus: true, class: "form-control", placeholder: "amount" %>
+  </div>
+
+<%# 
+  <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    food
+  </label>
+</div> %>
+
+<div class="field">
+    <%= f.label :groups, class:"mt-2" %><br />
+    <%= f.select :groups, options_from_collection_for_select(@available_groups, 'id', 'name'), {}, { class: "form-control" }%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Add Purchase", class: "add-category" %>
+  </div>
+
+<% end %>
+</section>
